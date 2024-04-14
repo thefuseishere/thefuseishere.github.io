@@ -21,9 +21,50 @@
             margin: 20px auto;
             max-width: 600px;
         }
+        .sidenav {
+          height: 100%;
+          width: 160px;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #1a2436; /* Dark blue color */
+          overflow-x: hidden;
+          padding-top: 20px;
+        }
+
+        .sidenav a {
+          padding: 6px 8px 6px 16px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+        }
+
+        .sidenav a:hover {
+          color: #f1f1f1;
+        }
+
+        .main {
+          margin-left: 160px;
+          font-size: 28px;
+          padding: 0px 10px;
+        }
+
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
     </style>
 </head>
 <body>
+    <div class="sidenav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#clients">Clients</a>
+      <a href="#contact">Contact</a>
+    </div>
+
     <h1>Welcome to my site</h1>
     <div class="info">
         <p>This website was made for fun and so I can put my Python projects here for download, along with information about how I made them, and more.</p>
